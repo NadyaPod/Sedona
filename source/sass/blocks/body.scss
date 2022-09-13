@@ -2,8 +2,13 @@
   height: 100%;
   margin: 0;
   font-family: $main-font;
+  position: relative;
 
   &--no-scroll {
     overflow-y: hidden;
+  }
+
+  &--fixed {
+    position: fixed;
   }
 }

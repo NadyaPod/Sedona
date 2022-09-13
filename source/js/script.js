@@ -8,4 +8,5 @@ navToggle.addEventListener("click", () => {
   nav.classList.toggle("navigation--closed");
   nav.classList.toggle("navigation--opened");
   body.classList.toggle("body--no-scroll");
+  body.classList.toggle("body--fixed");
 });
