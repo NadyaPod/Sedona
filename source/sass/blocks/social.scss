@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  background-color: $blue;
+  padding: 12px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: $white-opacity;
+    background-color: $blue-dark;
+  }
+}
+
+.social__link-icon {
+  fill: currentColor;
+}

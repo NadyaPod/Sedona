@@ -1,0 +1,19 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 56px;
+}
+
+.header__logo {
+  display: block;
+  position: absolute;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}

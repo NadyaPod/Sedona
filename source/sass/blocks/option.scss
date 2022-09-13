@@ -1,0 +1,126 @@
+.option {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  padding: 0 0 20px 0;
+}
+
+.option__image-link {
+  grid-column: 1 / -1;
+}
+
+.option__image {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+
+  @media (min-width: $desktop-width) {
+    object-fit: cover;
+  }
+}
+
+.option__link {
+  grid-column: 1 / -1;
+  text-decoration: none;
+}
+
+.option__info {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.option__button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-weight: 700;
+  font-family: inherit;
+  color: $white;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-self: start;
+  border: none;
+  border-radius: 4px;
+  background-color: $blue;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: $white-opacity;
+    background-color: $blue-dark;
+  }
+
+
+  &--more {
+    background-color: $brown;
+
+    &:hover {
+      background-color: $brown-dark;
+    }
+
+    &:active {
+      color: $white-opacity;
+      background-color: $brown-light;
+    }
+  }
+
+  &--active {
+    background-color: $green-light;
+
+    &:hover {
+      background-color: $green-second;
+    }
+
+    &:active {
+      color: $white-opacity;
+    }
+  }
+
+  @media (max-width: $mobile-only) {
+    grid-column: 1 / -1;
+  }
+}
+
+.option__rating {
+  display: flex;
+  background-image: url("../img/decor-icons/star.svg");
+  background-repeat: space repeat;
+
+  &--two {
+    width: 42px;
+    height: 18px;
+    align-self: center;
+  }
+
+  &--three {
+    width: 66px;
+    height: 18px;
+    align-self: center;
+  }
+
+  &--four {
+    width: 88px;
+    height: 18px;
+    align-self: center;
+  }
+}
+
+.option__score {
+  width: 100%;
+  padding: 9px 10px;
+  align-self: start;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: $grey-bg;
+}

@@ -1,0 +1,20 @@
+.field-icon {
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    background-color: $grey-dark;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--phone::after {
+    background-image: url("../img/decor-icons/phone.svg");
+  }
+
+  &--mail::after {
+    background-image: url("../img/decor-icons/mail.svg");
+  }
+}

@@ -1,0 +1,14 @@
+.filter-hero {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.filter-hero__title {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 26px;
+    line-height: 30px;
+    padding: 30px 20px 40px;
+  }
+}

@@ -1,0 +1,96 @@
+.button {
+  display: block;
+  border: none;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: inherit;
+  color: $white;
+  background-color: $blue;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &--search {
+    padding: 14px 20px 18px;
+  }
+
+  &--form {
+    padding: 18px 34px 14px;
+
+    @media (max-width: $mobile-only) {
+      width: 100%;
+    }
+  }
+
+  &--modal {
+    padding: 17px 25px;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+    }
+  }
+
+  &--error {
+    width: 180px;
+
+    @media (min-width: $tablet-width) {
+      width: 272px;
+    }
+  }
+
+  &--success {
+    width: 280px;
+
+    @media (min-width: $tablet-width) {
+      width: 458px;
+    }
+  }
+
+  &--reset {
+    color: $black;
+    padding: 14px 32px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &--more {
+    width: 150px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 9px 15px;
+    align-self: start;
+    color: #ffffff;
+    background-color: $brown;
+    border-radius: 4px;
+  }
+
+  &:disabled {
+    background-color: $grey-second;
+    cursor: auto;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: $blue-hover;
+  }
+
+  &:active:not([disabled]) {
+    color: $white-opacity;
+    background-color: $blue-dark;
+  }
+
+  // Disabled button styleguide
+  &--disabled {
+    background-color: $grey-second;
+    cursor: auto;
+
+    &:hover {
+      background-color: $grey-second;
+    }
+  }
+}

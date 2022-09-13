@@ -1,0 +1,29 @@
+.title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+  text-transform: uppercase;
+
+  &--light {
+    color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+
+    &--lined {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        border-top: 1px solid $grey-border;
+        width: 105%;
+      }
+    }
+  }
+}

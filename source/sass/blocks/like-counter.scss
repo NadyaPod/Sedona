@@ -1,0 +1,35 @@
+.like-counter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  &::before {
+    content: "";
+    position: relative;
+    left: 5px;
+    top: -2px;
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/decor-icons/like-icon.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/decor-icons/like-icon-light.svg");
+    }
+  }
+}
+
+.like-counter__number {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $black;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}

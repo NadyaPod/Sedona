@@ -1,0 +1,92 @@
+.hero {
+  position: relative;
+  padding: 90px 20px 85px;
+  background-color: $blue;
+  background-image: url("../img/hero/hero.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/hero@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 154px 90px;
+    background-image: url("../img/hero/hero-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/hero-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/hero/hero-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/hero-desktop@2x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 57px;
+    position: absolute;
+    background-image: url("../img/decor-icons/divider.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--small {
+    padding: 52px 46px 65px;
+    background-image: url("../img/hero/hero-small.jpg");
+    background-position: 0 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/hero-small@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 95px 46px 120px;
+      background-image: url("../img/hero/hero-small-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero/hero-small-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 101px;
+      background-image: url("../img/hero/hero-small-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero/hero-small-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.hero__image-text {
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 462px;
+    height: 350px;
+  }
+
+  &--small {
+    @media (min-width: $tablet-width) {
+      width: 457px;
+      height: 77px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 460px;
+      height: 80px;
+    }
+  }
+}

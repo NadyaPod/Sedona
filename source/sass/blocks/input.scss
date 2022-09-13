@@ -1,0 +1,26 @@
+.input {
+  border: none;
+  padding: 16px;
+  background-color: $grey-bg;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: inherit;
+  font-weight: 700;
+  color: $black;
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    color: $grey-opacity;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: $grey-second;
+  }
+
+  &:focus:not(:placeholder-shown) {
+    outline: 3px solid $grey-second;
+    outline-offset: -3px;
+    background-color: $white;
+  }
+}

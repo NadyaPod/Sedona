@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Седона: фото и видео</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/favicon-32.png">
+    <link rel="icon" href="./img/favicon/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="preload" href="./fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="./fonts/ptsansbold.woff2 " as="font">
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body class="body">
+    <div class="container">
+      <header class="header">
+        <a class="header__logo logo" href="./index.html">
+          <img class="logo__image" src="./img/logo.svg" width="185" height="96" alt="Логотип Седоны."/>
+        </a>
+        <nav class="navigation navigation--closed navigation--nojs">
+          <button class="navigation__toggle" type="button">
+            <span class="navigation__toggle-dash"></span>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--current">Фото и видео</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./form.html">Форма отзыва</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="hero hero--small">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/hero/text-small-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/hero/hero-text-small.svg">
+            <img class="hero__image-text hero__image-text--small" src="./img/hero/hero-text-small.svg" width="229" height="39" alt="На картинке написан текст: Sedona."/>
+          </picture>
+        </div>
+
+        <section class="gallery">
+          <div class="gallery__text">
+            <h1 class="gallery__title title">Фото и видео</h1>
+            <p class="gallery__description description">
+              Не можете решиться на путешествие из-за курса? Фотографии помогут
+              вам забыть о политике и экономике.
+            </p>
+          </div>
+          <ul class="gallery__list">
+            <li class="gallery__item photo-card">
+              <a href="#" class="photo-card__link">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/gallery/gallery-01-desktop.webp 1x, ./img/gallery/gallery-01-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/gallery/gallery-01-tablet.webp 1x, ./img/gallery/gallery-01-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/gallery/gallery-01.webp 1x, ./img/gallery/gallery-01@2x.webp 2x"/>
+                  <source media="(min-width: 1200px)" srcset="./img/gallery/gallery-01-desktop.jpg 1x, ./img/gallery/gallery-01-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/gallery/gallery-01-tablet.jpg 1x, ./img/gallery/gallery-01-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="./img/gallery/gallery-01.jpg" srcset="./img/gallery/gallery-01@2x.jpg 2x" width="280" height="280" loading="lazy" alt="Дорога и горы."/>
+                </picture>
+
+              </a>
+              <div class="photo-card__info">
+                <div class="photo-card__text">
+                  <h3 class="photo-card__title title">Неродные просторы</h3>
+                  <p class="photo-card__author">Автор фото: Борис</p>
+                </div>
+                <div class="photo-card__like-counter like-counter">
+                  <p class="like-counter__number">1350</p>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item photo-card">
+              <a class="photo-card__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/gallery/gallery-02-desktop.webp 1x, ./img/gallery/gallery-02-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/gallery/gallery-02-tablet.webp 1x, ./img/gallery/gallery-02-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/gallery/gallery-02.webp 1x, ./img/gallery/gallery-02@2x.webp 2x"/>
+                  <source media="(min-width: 1200px)" srcset="./img/gallery/gallery-02-desktop.jpg 1x, ./img/gallery/gallery-02-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/gallery/gallery-02-tablet.jpg 1x, ./img/gallery/gallery-02-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="./img/gallery/gallery-02.jpg" srcset="./img/gallery/gallery-02@2x.jpg 2x" width="280" height="280" loading="lazy" alt="Диковинное растение, похожее на кактус."/>
+                </picture>
+              </a>
+              <div class="photo-card__info">
+                <div class="photo-card__text">
+                  <h3 class="photo-card__title title">Местная растительность</h3>
+                  <p class="photo-card__author">Автор фото: Сергей</p>
+                </div>
+                <div class="photo-card__like-counter like-counter">
+                  <p class="like-counter__number">143</p>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item photo-card">
+              <a class="photo-card__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/gallery/gallery-03-desktop.webp 1x, ./img/gallery/gallery-03-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/gallery/gallery-03-tablet.webp 1x, ./img/gallery/gallery-03-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/gallery/gallery-03.webp 1x, ./img/gallery/gallery-03@2x.webp 2x"/>
+                  <source media="(min-width: 1200px)" srcset="./img/gallery/gallery-03-desktop.jpg 1x, ./img/gallery/gallery-03-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/gallery/gallery-03-tablet.jpg 1x, ./img/gallery/gallery-03-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="./img/gallery/gallery-03.jpg" srcset="./img/gallery/gallery-03@2x.jpg 2x" width="280" height="280" loading="lazy" alt="Горная дорога в лесу."/>
+                </picture>
+              </a>
+              <div class="photo-card__info">
+                <div class="photo-card__text">
+                  <h3 class="photo-card__title title">Дорога на север</h3>
+                  <p class="photo-card__author">Автор фото: Петр</p>
+                </div>
+                <div class="photo-card__like-counter like-counter">
+                  <p class="like-counter__number">96</p>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item photo-card">
+              <a class="photo-card__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/gallery/gallery-04-desktop.webp 1x, ./img/gallery/gallery-04-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/gallery/gallery-04-tablet.webp 1x, ./img/gallery/gallery-04-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/gallery/gallery-04.webp 1x, ./img/gallery/gallery-04@2x.webp 2x"/>
+                  <source media="(min-width: 1200px)" srcset="./img/gallery/gallery-04-desktop.jpg 1x, ./img/gallery/gallery-04-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/gallery/gallery-04-tablet.jpg 1x, ./img/gallery/gallery-04-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="./img/gallery/gallery-04.jpg" srcset="./img/gallery/gallery-04@2x.jpg 2x" width="280" height="280" loading="lazy" alt="Каменный мост в каньоне."/>
+                </picture>
+              </a>
+              <div class="photo-card__info">
+                <div class="photo-card__text">
+                  <h3 class="photo-card__title title">Мост дьявола</h3>
+                  <p class="photo-card__author">Автор фото: Антон</p>
+                </div>
+                <div class="photo-card__like-counter like-counter">
+                  <p class="like-counter__number">254</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="gallery__video">
+            <div class="gallery__video-text">
+              <h2 class="gallery__title title">Все еще сомневаетесь?</h2>
+              <p class="gallery__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            </div>
+          </div>
+
+          <div class="gallery__video-player video-player">
+            <button class="video-player__button" type="button">
+              <svg class="video-player__icon" width="48" height="54">
+                <use href="./img/sprite.svg#play"></use>
+              </svg>
+              <span class="visually-hidden">Воспроизвести/остановить видео</span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a class="footer__hashtag" href="https://www.youtube.com/hashtag/visitsedona" target="_blank" rel="noopener noreferrer">#visitsedona</a>
+        <ul class="footer__social-list social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/" target="_blank" rel="noopener noreferrer">
+              <svg class="social__link-icon" width="24" height="24">
+                <use href="./img/sprite.svg#vk"></use>
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/" target="_blank" rel="noopener noreferrer">
+              <svg class="social__link-icon" width="24" height="24">
+                <use href="./img/sprite.svg#telegram"></use>
+              </svg>
+              <span class="visually-hidden">Телеграм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <svg class="social__link-icon" width="24" height="24">
+                <use href="./img/sprite.svg#youtube"></use>
+              </svg>
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__logo footer__logo--aligned" href="https://github.com/NadyaPod" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__logo-icon" width="45" height="45">
+            <use href="./img/sprite.svg#github"></use>
+          </svg>
+          <span class="visually-hidden">Профиль Github</span>
+        </a>
+      </footer>
+    </div>
+    <script src="./js/script.min.js"></script>
+  </body>
+</html>

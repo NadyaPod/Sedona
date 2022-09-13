@@ -1,0 +1,247 @@
+.navigation {
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+
+  &--nojs {
+    @media (max-width: $mobile-only) {
+      position: relative;
+      margin-top: 96px;
+    }
+  }
+}
+
+.navigation__list {
+  @include list-reset;
+  position: relative;
+
+  @media (max-width: $mobile-only) {
+    top: 0;
+    height: 100vh;
+    background-color: $blue;
+    transition: all 0.4s ease-out;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 0;
+  }
+}
+
+.navigation__item {
+  @media (min-width: $tablet-width) {
+    &:nth-child(3) {
+      grid-column: 4 / 5;
+    }
+
+    &:nth-child(7) {
+      grid-column: 4 / 5;
+    }
+  }
+}
+
+.navigation__link {
+  font-family: inherit;
+  color: $white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  display: block;
+  padding: 16px 40px 12px;
+  background-color: $blue;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 1px solid rgba($black, 0.2);
+  border-top: 1px solid rgba($white, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @media (max-width: $mobile-only) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    padding: 18px 10px 17px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $black;
+    background-color: $white;
+    border: none;
+
+    &--current {
+      color: $brown;
+    }
+  }
+
+  &:hover {
+    background-color: $blue-hover;
+
+    @media (min-width: $tablet-width) {
+      color: $blue;
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    color: $white-opacity;
+    background-color: $blue-dark;
+
+    @media (min-width: $tablet-width) {
+      color: $black;
+      opacity: 0.3;
+      background-color: transparent;
+    }
+  }
+}
+
+.navigation__toggle {
+  position: absolute;
+  right: 0;
+  display: block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+  width: 66px;
+  height: 56px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .navigation--closed .navigation__list {
+    top: -700px;
+    height: 0;
+  }
+
+  .navigation--nojs .navigation__toggle {
+    display: none;
+  }
+
+  .navigation--nojs .navigation__list {
+    display: block;
+    top: 0;
+    height: 100%;
+  }
+
+  .navigation--nojs .navigation {
+    position: static;
+  }
+
+  .navigation--nojs .navigation__link {
+    padding: 16px 40px 12px;
+  }
+}
+
+.navigation--closed .navigation__toggle-dash {
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 4px;
+  background-color: $blue;
+  transition: all 0.4s ease;
+}
+
+.navigation--closed .navigation__toggle-dash::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: $blue;
+  transition: all 0.4s ease;
+}
+
+.navigation--closed .navigation__toggle-dash::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: $blue;
+  transition: all 0.4s ease;
+}
+
+.navigation--opened .navigation__list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 7px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.navigation--opened .navigation__toggle-dash {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: $white;
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.navigation--opened .navigation__toggle-dash::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 4px;
+  transform: rotate(90deg);
+  background-color: $white;
+}
+
+.navigation--opened .navigation__toggle:hover {
+  .navigation__toggle-dash {
+    opacity: 0.6;
+  }
+}
+
+.navigation--opened .navigation__toggle:active {
+  .navigation__toggle-dash {
+    opacity: 0.3;
+  }
+}
+
+.navigation--closed .navigation__toggle:hover {
+  .navigation__toggle-dash {
+    background-color: $blue-opacity;
+  }
+
+  .navigation__toggle-dash::before {
+    background-color: $blue-opacity;
+  }
+
+  .navigation__toggle-dash::after {
+    background-color: $blue-opacity;
+  }
+}
+
+.navigation--closed .navigation__toggle:active {
+  .navigation__toggle-dash {
+    background-color: $blue-opacity-light;
+  }
+
+  .navigation__toggle-dash::before {
+    background-color: $blue-opacity-light;
+  }
+
+  .navigation__toggle-dash::after {
+    background-color: $blue-opacity-light;
+  }
+}

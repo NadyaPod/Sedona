@@ -1,0 +1,14 @@
+.legend-wrap {
+  @media (min-width: $tablet-width) {
+    max-width: 414px;
+    position: relative;
+    display: inline-block;
+    padding: 0 68px;
+    background-color: $white;
+
+    &--large {
+      max-width: 500px;
+      padding: 0 72px;
+    }
+  }
+}

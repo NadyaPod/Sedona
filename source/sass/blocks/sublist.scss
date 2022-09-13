@@ -1,0 +1,15 @@
+.sublist {
+  @include list-reset;
+
+  @media (max-width: $mobile-only) {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 50px;
+    gap: 31px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

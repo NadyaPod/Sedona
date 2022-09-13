@@ -1,0 +1,14 @@
+.textarea__input {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  resize: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 17px;
+  }
+}

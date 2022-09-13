@@ -1,0 +1,9 @@
+.body {
+  height: 100%;
+  margin: 0;
+  font-family: $main-font;
+
+  &--no-scroll {
+    overflow-y: hidden;
+  }
+}

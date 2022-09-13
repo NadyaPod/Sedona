@@ -1,0 +1,143 @@
+.fact {
+  position: relative;
+  background-color: $grey;
+
+  &--row {
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  &--reversed {
+    @media (min-width: $tablet-width) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--masked {
+    @media (max-width: $mobile-only) {
+      background-color: $white;
+    }
+  }
+}
+
+.fact__card {
+  padding: 40px 20px 38px;
+  background-color: $grey;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 256px;
+    padding: 40px 26px 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 400px;
+    padding: 50px;
+  }
+
+  &--masked {
+    @media (max-width: $mobile-only) {
+      padding-top: 69px;
+      clip-path: polygon(52% 18%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    // &::before {
+    //   content: "";
+    //   clip-path: polygon(100% 0, 0 0, 53% 22%);
+    //   left: 0;
+    //   top: 0;
+    //   width: 100%;
+    //   // height: 37px;
+    //   // position: absolute;
+    //   // background-image: url("../img/decor-icons/divider-s.svg");
+    //   // background-size: 100% auto;
+    //   // background-repeat: no-repeat;
+
+    //   @media (min-width: $tablet-width) {
+    //     display: none;
+    //   }
+    // }
+  }
+
+  &--light {
+    color: $white;
+    background-color: $blue;
+
+    @media (min-width: $tablet-width) {
+      width: 33.33%;
+    }
+  }
+
+  &--line {
+    margin: 0 20px;
+    border-bottom: 1px solid $grey-border;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      border: none;
+    }
+  }
+
+  &--size-s {
+    @media (max-width: $mobile-only) {
+      padding: 23px 20px 26px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 42px 36px 28px;
+    }
+  }
+}
+
+.fact__title {
+  margin: 0 auto;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 156px;
+  }
+}
+
+.fact__number {
+  display: block;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    content: "— ";
+  }
+
+  &::after {
+    content: " —";
+  }
+}
+
+.fact__image-wrap {
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
+}
+
+.fact__image {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.fact__description {
+  &--tourist {
+    @media (max-width: $mobile-only) {
+      max-width: 246px;
+      margin: 0 auto;
+    }
+  }
+}

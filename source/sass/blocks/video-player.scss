@@ -1,0 +1,70 @@
+.video-player {
+  max-width: 100%;
+  height: 177px;
+  display: block;
+  background-color: $green;
+  background-image: url("../img/video/video.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video/video@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+    background-image: url("../img/video/video-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video/video-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    height: 500px;
+    margin-bottom: 84px;
+    background-image: url("../img/video/video-desktop.jpg");
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video/video-desktop@2x.jpg");
+    }
+  }
+}
+
+.video-player__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @media (max-width: $mobile-only) {
+    position: relative;
+    left: 8px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.video-player__icon {
+  display: block;
+  fill: $white;
+}

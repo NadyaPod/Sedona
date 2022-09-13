@@ -1,0 +1,112 @@
+.field {
+  position: relative;
+}
+
+.field__label {
+  display: block;
+  padding-left: 16px;
+  color: $black-light;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  &--custom {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 61px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: none;
+    cursor: pointer;
+  }
+}
+
+.field__input {
+  width: 100%;
+
+  &:focus {
+    outline: 2px solid $black;
+  }
+}
+
+.field__radio:disabled + .field__custom {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.field__checkbox:disabled + .field__custom {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.field__custom {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: $grey-bg;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &:hover {
+    background-color: $grey-second;
+  }
+}
+
+.field__radio:checked + .field__custom--radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $black;
+}
+
+.field__checkbox:checked + .field__custom--checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/decor-icons/tick.svg");
+}
+
+.field__radio:focus + .field__custom--radio {
+  outline: 2px solid $black;
+}
+
+.field__checkbox:focus + .field__custom--checkbox {
+  outline: 2px solid $black;
+}
+
+.field__label--custom:active {
+  .field__custom--radio::before {
+    background-color: $black-light-opacity;
+  }
+
+  .field__custom {
+    background-color: $grey-dark-second;
+  }
+}
+
+.field__label--checkbox:active {
+  .field__custom--checkbox::before {
+    opacity: 0.3;
+  }
+
+  .field__custom {
+    background-color: $grey-dark-second;
+  }
+}

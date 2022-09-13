@@ -1,0 +1,24 @@
+.input-price__label {
+  position: relative;
+}
+
+.input-price__number {
+  display: block;
+  width: 100%;
+  padding-right: 50px;
+}
+
+.input-price__number::-webkit-outer-spin-button,
+.input-price__number::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.input-price__placeholder {
+  position: absolute;
+  top: 25%;
+  right: 20px;
+  color: #c9c6c6;
+  font-size: 18px;
+  line-height: 23px;
+}

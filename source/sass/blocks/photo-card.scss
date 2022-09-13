@@ -1,0 +1,79 @@
+.photo-card {
+  padding: 23px 0 28px;
+  border-top: 1px solid $grey-second;
+
+  @media (max-width: $mobile-only) {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 0;
+    border-top: none;
+
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.photo-card__image {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+
+.photo-card__info {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $grey-bg;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.photo-card__text {
+  padding-right: 20px;
+  margin-bottom: 14px;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.photo-card__title {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.photo-card__author {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
